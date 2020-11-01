@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
 
     var categoryID = '772518884405411840'
 
-    var application_reviewers = '772502115897442334';
+    var application_reviewers = '772502692974297160';
 
     var person = message.author;
 
@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args) => {
     var embed = new discord.MessageEmbed()
         .setTitle(`Hello ` + message.author.username)
         .setColor("AQUA")
-        .setDescription(`Your channel has been made at #${channelName}`)
+        .setDescription(`Your channel has been made at <#${channelName}>`)
         .setFooter("Application Bot | By JustReddy")
         .setTimestamp();
     message.channel.send(embed).then(m => m.delete({timeout : 3000}));
