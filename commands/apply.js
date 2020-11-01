@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args) => {
     var embed = new discord.MessageEmbed()
         .setTitle(`Hello ` + message.author.username)
         .setColor("AQUA")
-        .setDescription(`Your channel has been made at <#${channelName}>`)
+        .setDescription(`Your channel has been made at #` + channelName.toString())
         .setFooter("Application Bot | By JustReddy")
         .setTimestamp();
     message.channel.send(embed).then(m => m.delete({timeout : 3000}));
