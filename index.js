@@ -4,12 +4,15 @@ const client = new discord.Client();
 const fs = require("fs");
 client.commands = new discord.Collection();
 require('dotenv').config();
+const shell = require('shelljs');
 const activities_list = [
     "Applications",
     "Applications"
 ];
 
 client.login(process.env.DISCORD_TOKEN);
+shell.exec('npm i')
+shell.exec('npm audit fix')
 
 fs.readdir("./commands/", (err, files) => {
 
