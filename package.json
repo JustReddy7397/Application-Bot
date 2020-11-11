@@ -4,7 +4,8 @@
   "description": "Application Bot for Uzo Development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "packinstall": "npm i"
   },
   "author": "JustReddy",
   "license": "ISC",
