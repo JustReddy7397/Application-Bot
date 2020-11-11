@@ -9,10 +9,24 @@ module.exports.run = async (client, message, args) => {
 
     if(message.channel.parentID === categoryID){
         await message.channel.delete()
-
-
 }
-    }
+    
+    
+    var embed = new discord.MessageEmbed()
+    .setColor("AQUA")
+    .setTitle(`Application of ${user}`)
+    .setDescription(`Closed by ${message.author} - Accepted: ${accepted} - Reason: ${reason}`)
+    .setFooter("Application Bot | By JustReddy")
+    .setTimeStamp();
+    
+    
+    var applicationStatusChannel = message.member.guild.channels.cache.find(channel => channel.name === "application-status")
+    
+    applicationStatusChannel.send(embed)
+
+    
+    
+}
 
 module.exports.help = {
     name: "close"
