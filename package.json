@@ -12,6 +12,7 @@
   "dependencies": {
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
+    "shelljs": "^0.8.4",
     "quick.db": "^7.1.3"
   }
 }
